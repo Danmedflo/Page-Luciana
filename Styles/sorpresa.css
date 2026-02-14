@@ -1,0 +1,2362 @@
+/* ============================================
+   ESTILOS GALÁCTICOS ROMÁNTICOS PARA SORPRESA.HTML - VERSIÓN CORREGIDA
+   ============================================ */
+
+/* Variables galácticas */
+:root {
+  --romantic-primary: #ff6b6b;
+  --romantic-secondary: #ff8e8e;
+  --romantic-accent: #ffd93d;
+  --romantic-space: #4d96ff;
+  --romantic-magic: #9d4edd;
+  --romantic-success: #6bcf7f;
+  --romantic-bg: #0a0a1a;
+  --romantic-space-dark: #050510;
+  --romantic-text: #ffffff;
+  --romantic-text-secondary: #ffb6c1;
+  --romantic-border: rgba(255, 107, 107, 0.3);
+  --romantic-glow: rgba(255, 107, 107, 0.5);
+  --romantic-shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* Fondo galáctico romántico */
+body.galactic-sorpresa {
+  background: linear-gradient(180deg, 
+    var(--romantic-space-dark) 0%, 
+    #1a0a2a 30%, 
+    #2a0a3a 60%, 
+    var(--romantic-bg) 100%);
+  color: var(--romantic-text);
+  font-family: 'Poppins', 'Roboto', 'Great Vibes', cursive;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Wrapper para centrado vertical */
+.page-center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 40px);
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Fondo de galaxia */
+.galaxy-background-sorpresa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Estrellas galácticas */
+.galaxy-star-sorpresa {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: twinkleGalactic 4s infinite;
+}
+
+@keyframes twinkleGalactic {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Estrellas fugaces */
+.shooting-stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.shooting-star-sorpresa {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, white, transparent);
+  height: 2px;
+  border-radius: 50%;
+  animation: shootingStarSorpresa 3s linear forwards;
+  transform: rotate(-45deg);
+}
+
+@keyframes shootingStarSorpresa {
+  0% { 
+    transform: translateX(-100px) translateY(-100px) rotate(-45deg); 
+    opacity: 1; 
+  }
+  100% { 
+    transform: translateX(calc(100vw + 100px)) translateY(calc(100vh + 100px)) rotate(-45deg); 
+    opacity: 0; 
+  }
+}
+
+/* Panel de control */
+.control-panel-sorpresa {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+  background: rgba(255, 107, 107, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 15px;
+  border-radius: 20px;
+  border: 1px solid var(--romantic-border);
+  box-shadow: 0 10px 30px rgba(255, 107, 107, 0.2);
+}
+
+.control-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 15px;
+  transition: all 0.3s;
+  color: var(--romantic-text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.control-item:hover {
+  background: rgba(255, 107, 107, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+}
+
+.control-item.active {
+  background: rgba(107, 207, 127, 0.2);
+  color: var(--romantic-success);
+  box-shadow: 0 0 20px rgba(107, 207, 127, 0.3);
+}
+
+.control-item i {
+  font-size: 1.6rem;
+}
+
+.control-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Contadores galácticos */
+.love-counter-sorpresa {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 107, 107, 0.1);
+  color: var(--romantic-text);
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  z-index: 1000;
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--romantic-border);
+  box-shadow: 0 5px 20px rgba(255, 107, 107, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s;
+}
+
+.love-counter-sorpresa i {
+  color: var(--romantic-primary);
+  font-size: 1.3rem;
+  animation: heartbeat 1.5s infinite;
+}
+
+.moment-counter-sorpresa {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(77, 150, 255, 0.1);
+  color: var(--romantic-text);
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-family: 'Poppins', monospace;
+  font-size: 1.1rem;
+  font-weight: bold;
+  z-index: 1000;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(77, 150, 255, 0.3);
+  box-shadow: 0 5px 20px rgba(77, 150, 255, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s;
+}
+
+.moment-counter-sorpresa i {
+  color: var(--romantic-space);
+  font-size: 1.3rem;
+}
+
+.secret-counter-sorpresa {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(157, 78, 221, 0.1);
+  color: var(--romantic-text);
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 1000;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(157, 78, 221, 0.3);
+  box-shadow: 0 5px 20px rgba(157, 78, 221, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s;
+}
+
+.secret-counter-sorpresa i {
+  color: var(--romantic-magic);
+  font-size: 1.3rem;
+}
+
+/* Contenedor universal */
+.universal-container-sorpresa {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  background: rgba(20, 10, 40, 0.7);
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  overflow: hidden;
+  border: 2px solid var(--romantic-border);
+  z-index: 3;
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    inset 0 0 100px rgba(255, 107, 107, 0.1);
+  margin: 20px auto;
+}
+
+/* Constelación de sorpresa */
+.sorpresa-constellation {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+  filter: drop-shadow(0 0 10px rgba(255, 107, 107, 0.5));
+  z-index: 4;
+}
+
+.sorpresa-constellation .constellation-star {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--romantic-secondary);
+  border-radius: 50%;
+  animation: twinkleGalactic 3s infinite;
+  box-shadow: 0 0 15px var(--romantic-secondary);
+}
+
+.sorpresa-constellation .constellation-star:nth-child(1) { top: 20%; left: 30%; }
+.sorpresa-constellation .constellation-star:nth-child(2) { top: 40%; left: 10%; }
+.sorpresa-constellation .constellation-star:nth-child(3) { top: 60%; left: 40%; }
+.sorpresa-constellation .constellation-star:nth-child(4) { top: 80%; left: 20%; }
+.sorpresa-constellation .constellation-star:nth-child(5) { top: 30%; left: 70%; }
+.sorpresa-constellation .constellation-star:nth-child(6) { top: 50%; left: 80%; }
+.sorpresa-constellation .constellation-star:nth-child(7) { top: 70%; left: 60%; }
+.sorpresa-constellation .constellation-star:nth-child(8) { top: 10%; left: 50%; }
+
+.sorpresa-constellation .constellation-star::after {
+  content: attr(data-star);
+  position: absolute;
+  top: -20px;
+  left: -5px;
+  color: var(--romantic-text-secondary);
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Planetas románticos */
+.romantic-planets-sorpresa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.planet-sorpresa {
+  position: absolute;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 20px currentColor);
+  z-index: 2;
+  animation: floatPlanet 25s infinite ease-in-out;
+}
+
+.planet-1 {
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(circle at 30% 30%, var(--romantic-primary), #ff3333);
+  top: 15%;
+  right: 8%;
+  animation-delay: 0s;
+}
+
+.planet-2 {
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle at 30% 30%, var(--romantic-accent), #ffaa00);
+  bottom: 25%;
+  left: 10%;
+  animation-delay: 8s;
+}
+
+.planet-3 {
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle at 30% 30%, var(--romantic-success), #4caf50);
+  top: 60%;
+  right: 20%;
+  animation-delay: 15s;
+}
+
+@keyframes floatPlanet {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.4; }
+  50% { transform: translateY(-20px) rotate(5deg); opacity: 0.8; }
+}
+
+/* Nebulosa romántica */
+.romantic-nebula-sorpresa {
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, 
+    rgba(255, 107, 107, 0.15) 0%, 
+    rgba(157, 78, 221, 0.1) 30%,
+    transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.4;
+  pointer-events: none;
+  animation: float 20s infinite ease-in-out;
+}
+
+/* Galaxia del amor */
+.love-galaxy-sorpresa {
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, 
+    rgba(255, 182, 193, 0.2) 0%, 
+    rgba(255, 107, 107, 0.1) 40%,
+    transparent 80%);
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.3;
+  pointer-events: none;
+  animation: rotateGalaxy 30s infinite linear;
+}
+
+@keyframes rotateGalaxy {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Contenedor del mensaje galáctico */
+.galactic-message-container-sorpresa {
+  position: relative;
+  width: 100%;
+  z-index: 4;
+  padding: 40px;
+}
+
+/* Marco galáctico */
+.galactic-frame-sorpresa {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 40px;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.frame-glow-sorpresa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    transparent, 
+    rgba(255, 107, 107, 0.1), 
+    rgba(157, 78, 221, 0.1),
+    transparent);
+  animation: rotateBackground 25s infinite linear;
+}
+
+@keyframes rotateBackground {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.frame-particles-sorpresa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+/* Encabezado del mensaje */
+.message-header-sorpresa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.title-constellation-sorpresa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex: 0 0 auto;
+}
+
+.title-star-sorpresa {
+  width: 10px;
+  height: 10px;
+  background: var(--romantic-accent);
+  border-radius: 50%;
+  animation: twinkleGalactic 2s infinite;
+}
+
+.title-star-sorpresa:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.galactic-title-sorpresa {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  flex: 0 1 auto;
+  min-width: 300px;
+}
+
+.title-for-sorpresa {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: var(--romantic-text-secondary);
+  opacity: 0.9;
+}
+
+.title-name-sorpresa {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+  color: var(--romantic-primary);
+  text-shadow: 0 0 20px var(--romantic-glow);
+  background: linear-gradient(45deg, var(--romantic-primary), var(--romantic-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+}
+
+.title-from-sorpresa {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+  color: var(--romantic-space);
+  opacity: 0.8;
+}
+
+/* Separador cósmico */
+.cosmic-separator-sorpresa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+  position: relative;
+}
+
+.separator-line-sorpresa {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--romantic-space), 
+    transparent);
+}
+
+.separator-heart-sorpresa {
+  margin: 0 30px;
+  font-size: 2rem;
+  color: var(--romantic-primary);
+  animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Título principal */
+.main-title-sorpresa {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.galactic-title-main-sorpresa {
+  font-family: 'English Towne', 'Cinzel', serif;
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: white;
+  text-shadow: 
+    0 0 10px var(--romantic-primary),
+    0 0 20px var(--romantic-primary),
+    0 0 30px var(--romantic-primary);
+  margin-bottom: 15px;
+}
+
+.galactic-subtitle-sorpresa {
+  font-size: 2rem;
+  margin: 20px 0;
+  font-weight: 600;
+  font-family: 'Great Vibes', cursive;
+  color: var(--romantic-text);
+  background: linear-gradient(90deg, 
+    var(--romantic-primary), 
+    var(--romantic-accent), 
+    var(--romantic-success), 
+    var(--romantic-space));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 300% 300%;
+  animation: gradienteAnimado 3s ease infinite;
+}
+
+@keyframes gradienteAnimado {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.galactic-phrase-sorpresa {
+  font-size: 1.8rem;
+  font-style: italic;
+  color: var(--romantic-text-secondary);
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* ================================
+   PREGUNTA 3D — CENTRADO CORRECTO
+   ================================ */
+
+.question-3d-container-sorpresa {
+  perspective: 1000px;
+  margin: 40px auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* Elemento 3D principal */
+.question-3d-sorpresa {
+  position: relative;
+  display: inline-block;
+
+  transform-style: preserve-3d;
+  transform-origin: center center;
+
+  animation: float3d 6s infinite ease-in-out;
+  cursor: pointer;
+}
+
+/* Animación flotante 3D */
+@keyframes float3d {
+  0%, 100% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: rotateX(5deg) rotateY(5deg);
+  }
+  50% {
+    transform: rotateX(0deg) rotateY(10deg);
+  }
+  75% {
+    transform: rotateX(-5deg) rotateY(5deg);
+  }
+}
+
+/* Capas 3D centradas geométricamente */
+.question-layer-sorpresa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%);
+
+  width: max-content;
+  text-align: center;
+  white-space: nowrap;
+
+  font-size: 2rem;
+  font-weight: bold;
+
+  transition: transform 0.5s ease;
+}
+
+/* Capas de profundidad */
+.question-layer-sorpresa.front {
+  transform: translate(-50%, -50%) translateZ(20px);
+  color: var(--romantic-primary);
+  text-shadow: 0 0 20px var(--romantic-primary);
+}
+
+.question-layer-sorpresa.middle {
+  transform: translate(-50%, -50%) translateZ(0);
+  color: var(--romantic-secondary);
+  opacity: 0.7;
+}
+
+.question-layer-sorpresa.back {
+  transform: translate(-50%, -50%) translateZ(-20px);
+  color: var(--romantic-text-secondary);
+  opacity: 0.5;
+}
+
+
+/* Nave de contenido */
+.content-spaceship-sorpresa {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  background: rgba(20, 10, 40, 0.7);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 40px auto;
+  border: 1px solid rgba(255, 107, 107, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 1100px;
+  transition: transform 0.3s;
+  gap: 30px;
+}
+
+.content-spaceship-sorpresa:hover {
+  transform: translateY(-5px);
+  border-color: var(--romantic-primary);
+}
+
+.content-spaceship-sorpresa.reverse {
+  flex-direction: row-reverse;
+}
+
+.spaceship-cockpit-sorpresa {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.spaceship-window-sorpresa {
+  flex: 1;
+  min-width: 300px;
+}
+
+.cockpit-content-sorpresa {
+  padding: 20px;
+}
+
+.cockpit-title-sorpresa {
+  color: var(--romantic-primary);
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cockpit-text-sorpresa {
+  color: var(--romantic-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.cosmic-stats-sorpresa {
+  display: flex;
+  gap: 30px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cosmic-stat-sorpresa {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--romantic-accent);
+  font-weight: bold;
+  padding: 10px 15px;
+  background: rgba(255, 217, 61, 0.1);
+  border-radius: 10px;
+}
+
+.window-frame-sorpresa {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 3px solid var(--romantic-border);
+  height: 100%;
+}
+
+.window-content-sorpresa {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.window-image-sorpresa {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.window-overlay-sorpresa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.window-content-sorpresa:hover .window-overlay-sorpresa {
+  opacity: 1;
+}
+
+.window-content-sorpresa:hover .window-image-sorpresa {
+  transform: scale(1.05);
+}
+
+.window-caption-sorpresa {
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--romantic-text-secondary);
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Misión de progreso */
+.mission-progress-sorpresa {
+  margin-top: 30px;
+}
+
+.progress-label-sorpresa {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: var(--romantic-text);
+}
+
+.progress-percent-sorpresa {
+  color: var(--romantic-accent);
+  font-weight: bold;
+}
+
+.progress-bar-sorpresa {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill-sorpresa {
+  height: 100%;
+  background: linear-gradient(90deg, var(--romantic-primary), var(--romantic-magic));
+  border-radius: 5px;
+  animation: progressPulse 2s infinite;
+}
+
+@keyframes progressPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Llamado a la misión */
+.mission-callout-sorpresa {
+  background: linear-gradient(135deg, rgba(157, 78, 221, 0.1), rgba(77, 150, 255, 0.1));
+  border-radius: 20px;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 800px;
+  border: 2px solid var(--romantic-magic);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.callout-header-sorpresa {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.callout-icon-sorpresa {
+  font-size: 3rem;
+  color: var(--romantic-magic);
+  margin-bottom: 15px;
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
+  50% { transform: translateY(-30px) rotate(10deg); opacity: 1; }
+}
+
+.callout-title-sorpresa {
+  font-size: 1.8rem;
+  color: var(--romantic-text);
+  margin-bottom: 10px;
+}
+
+.callout-body-sorpresa {
+  padding: 20px 0;
+}
+
+.callout-text-sorpresa {
+  font-size: 1.5rem;
+  color: var(--romantic-text);
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.corazon-latido-sorpresa {
+  animation: heartbeat 1.5s infinite;
+  color: var(--romantic-primary);
+  font-size: 1.8rem;
+}
+
+.callout-actions-sorpresa {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-callout-sorpresa {
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  min-width: 200px;
+  justify-content: center;
+}
+
+.btn-callout-sorpresa.accept {
+  background: linear-gradient(135deg, var(--romantic-primary), var(--romantic-secondary));
+  color: white;
+}
+
+.btn-callout-sorpresa.accept:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+}
+
+.btn-callout-sorpresa.details {
+  background: transparent;
+  color: var(--romantic-space);
+  border: 2px solid var(--romantic-space);
+}
+
+.btn-callout-sorpresa.details:hover {
+  background: var(--romantic-space);
+  color: white;
+}
+
+/* Cupones estelares */
+.stellar-coupons-sorpresa {
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(20, 10, 40, 0.7);
+  border-radius: 20px;
+  border: 1px solid rgba(77, 150, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.coupons-header-sorpresa {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.coupons-header-sorpresa h3 {
+  font-family: 'English Towne', serif;
+  font-size: 2.5rem;
+  color: var(--romantic-text);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.coupons-subtitle-sorpresa {
+  color: var(--romantic-text-secondary);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.coupons-grid-sorpresa {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+/* Cupones individuales - Estilos reutilizados de .coupon-card-sorpresa */
+.coupon-card-sorpresa {
+  background: rgba(30, 15, 60, 0.5);
+  border-radius: 15px;
+  padding: 25px;
+  border: 1px solid rgba(77, 150, 255, 0.2);
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.coupon-card-sorpresa::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    var(--romantic-primary), 
+    var(--romantic-accent));
+}
+
+.coupon-card-sorpresa:hover {
+  transform: translateY(-5px);
+  border-color: var(--romantic-space);
+  box-shadow: 0 10px 25px rgba(0, 150, 255, 0.2);
+}
+
+.coupon-card-sorpresa.secret {
+  background: linear-gradient(145deg, 
+    rgba(157, 78, 221, 0.1), 
+    rgba(30, 15, 60, 0.5));
+  border-color: rgba(157, 78, 221, 0.3);
+}
+
+.coupon-card-sorpresa.secret::before {
+  background: linear-gradient(90deg, 
+    var(--romantic-magic), 
+    var(--romantic-space));
+}
+
+.coupon-header-sorpresa {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.coupon-icon-sorpresa {
+  font-size: 2.5rem;
+  color: var(--romantic-primary);
+  margin-right: 15px;
+  animation: float 3s infinite ease-in-out;
+}
+
+.coupon-card-sorpresa.secret .coupon-icon-sorpresa {
+  color: var(--romantic-magic);
+  animation: sparkleTwinkle 2s infinite;
+}
+
+@keyframes sparkleTwinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.coupon-title-sorpresa {
+  font-size: 1.4rem;
+  color: var(--romantic-text);
+  flex-grow: 1;
+}
+
+.coupon-rarity-sorpresa {
+  margin-left: auto;
+}
+
+.rarity-badge-sorpresa {
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.rarity-badge-sorpresa.common {
+  background: rgba(77, 150, 255, 0.2);
+  color: var(--romantic-space);
+  border: 1px solid var(--romantic-space);
+}
+
+.rarity-badge-sorpresa.rare {
+  background: rgba(107, 207, 127, 0.2);
+  color: var(--romantic-success);
+  border: 1px solid var(--romantic-success);
+}
+
+.rarity-badge-sorpresa.epic {
+  background: rgba(157, 78, 221, 0.2);
+  color: var(--romantic-magic);
+  border: 1px solid var(--romantic-magic);
+}
+
+.rarity-badge-sorpresa.legendary {
+  background: linear-gradient(135deg, 
+    rgba(255, 107, 107, 0.2), 
+    rgba(255, 217, 61, 0.2));
+  color: var(--romantic-primary);
+  border: 1px solid var(--romantic-primary);
+}
+
+.coupon-content-sorpresa {
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.coupon-description-sorpresa {
+  color: var(--romantic-text-secondary);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.coupon-stats-sorpresa {
+  display: flex;
+  gap: 20px;
+  font-size: 0.9rem;
+  color: var(--romantic-text-secondary);
+  flex-wrap: wrap;
+}
+
+.coupon-stats-sorpresa span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.coupon-stats-sorpresa i {
+  color: var(--romantic-accent);
+}
+
+.coupon-action-sorpresa {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-coupon-sorpresa {
+  width: 100%;
+  padding: 12px 20px;
+  background: rgba(255, 107, 107, 0.1);
+  color: var(--romantic-primary);
+  border: 1px solid var(--romantic-primary);
+  border-radius: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-coupon-sorpresa::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.btn-coupon-sorpresa:hover::before {
+  left: 100%;
+}
+
+.btn-coupon-sorpresa:hover {
+  background: var(--romantic-primary);
+  color: white;
+  transform: scale(1.05);
+}
+
+.btn-coupon-sorpresa.secret {
+  background: rgba(157, 78, 221, 0.1);
+  color: var(--romantic-magic);
+  border-color: var(--romantic-magic);
+}
+
+.btn-coupon-sorpresa.secret:hover {
+  background: var(--romantic-magic);
+  color: white;
+}
+
+.coupons-note-sorpresa {
+  text-align: center;
+  color: var(--romantic-text-secondary);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Sistema del corazón interactivo */
+.interactive-heart-system-sorpresa {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 40px auto;
+  z-index: 4;
+  cursor: pointer;
+}
+
+.heart-ring-sorpresa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 3px solid var(--romantic-primary);
+  border-radius: 50%;
+  opacity: 0;
+  animation: energyRing 1s infinite ease-out;
+}
+
+@keyframes energyRing {
+  0% { transform: scale(0.8); opacity: 0.5; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.ring-1 { animation-delay: 0s; }
+.ring-2 { animation-delay: 0.3s; }
+.ring-3 { animation-delay: 0.6s; }
+
+.main-heart-sorpresa {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.main-heart-sorpresa:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.heart-glow-sorpresa {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, 
+    var(--romantic-glow) 0%, 
+    transparent 70%);
+  border-radius: 50%;
+  animation: pulseGlow 2s infinite;
+  filter: blur(10px);
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; transform: scale(0.95); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+
+.heart-pulse-sorpresa {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--romantic-primary);
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: corePulse 1.5s infinite;
+}
+
+@keyframes corePulse {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.2); opacity: 0.2; }
+}
+
+.heart-core-sorpresa {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, 
+    var(--romantic-primary), 
+    var(--romantic-secondary));
+  border-radius: 50%;
+  box-shadow: 
+    0 0 30px var(--romantic-glow),
+    inset 0 0 20px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s;
+}
+
+.heart-core-sorpresa i {
+  font-size: 3.5rem;
+  color: white;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  animation: heartbeat 2s infinite;
+}
+
+.heart-sparkles-sorpresa {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  display: flex;
+  gap: 5px;
+  z-index: 3;
+}
+
+.heart-sparkles-sorpresa i {
+  color: var(--romantic-accent);
+  font-size: 1.2rem;
+  animation: sparkleTwinkle 1.5s infinite;
+}
+
+.heart-sparkles-sorpresa i:nth-child(1) { animation-delay: 0s; }
+.heart-sparkles-sorpresa i:nth-child(2) { animation-delay: 0.5s; }
+.heart-sparkles-sorpresa i:nth-child(3) { animation-delay: 1s; }
+
+/* Playlists estelares */
+.stellar-playlists-sorpresa {
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(20, 10, 40, 0.7);
+  border-radius: 20px;
+  border: 1px solid var(--romantic-border);
+}
+
+.playlists-header-sorpresa {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.playlists-header-sorpresa h3 {
+  font-size: 2.5rem;
+  color: var(--romantic-text);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.playlists-subtitle-sorpresa {
+  color: var(--romantic-text-secondary);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.playlists-container-sorpresa {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.playlist-card-sorpresa {
+  background: rgba(30, 15, 60, 0.5);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.playlist-card-sorpresa:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(255, 107, 107, 0.2);
+  border-color: var(--romantic-primary);
+}
+
+.playlist-card-sorpresa.combined {
+  border-color: var(--romantic-magic);
+}
+
+.playlist-cover-sorpresa {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.cover-image-sorpresa {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover-image-sorpresa i {
+  font-size: 4rem;
+  color: white;
+}
+
+.cover-glow-sorpresa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: rotateBackground 15s infinite linear;
+}
+
+.playlist-info-sorpresa {
+  padding: 20px;
+}
+
+.playlist-title-sorpresa {
+  font-size: 1.5rem;
+  color: var(--romantic-text);
+  margin-bottom: 10px;
+}
+
+.playlist-description-sorpresa {
+  color: var(--romantic-text-secondary);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.playlist-stats-sorpresa {
+  display: flex;
+  justify-content: space-between;
+  color: var(--romantic-text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-playlist-sorpresa {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 107, 107, 0.1);
+  color: var(--romantic-primary);
+  border: 1px solid var(--romantic-primary);
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-playlist-sorpresa:hover {
+  background: var(--romantic-primary);
+  color: white;
+  transform: scale(1.05);
+}
+
+.btn-playlist-sorpresa.combined {
+  background: rgba(157, 78, 221, 0.1);
+  color: var(--romantic-magic);
+  border-color: var(--romantic-magic);
+}
+
+.btn-playlist-sorpresa.combined:hover {
+  background: var(--romantic-magic);
+  color: white;
+}
+
+/* Mensaje final galáctico */
+.galactic-message-sorpresa {
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+.message-container-sorpresa {
+  background: rgba(20, 10, 40, 0.7);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid var(--romantic-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.message-header-sorpresa {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.message-icon-sorpresa {
+  font-size: 2rem;
+  color: var(--romantic-primary);
+}
+
+.message-title-sorpresa {
+  font-family: 'English Towne', serif;
+  font-size: 2rem;
+  color: var(--romantic-text);
+  margin: 0;
+}
+
+.message-content-sorpresa {
+  padding: 20px 0;
+}
+
+.message-text-sorpresa {
+  color: var(--romantic-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.message-quote-sorpresa {
+  background: rgba(255, 107, 107, 0.1);
+  border-left: 4px solid var(--romantic-primary);
+  padding: 20px;
+  border-radius: 0 10px 10px 0;
+  margin: 30px 0;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.message-quote-sorpresa i {
+  color: var(--romantic-primary);
+  font-size: 1.5rem;
+}
+
+.message-signature-sorpresa {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.signature-line-sorpresa {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--romantic-primary), 
+    transparent);
+}
+
+.signature-content-sorpresa {
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--romantic-text-secondary);
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+}
+
+.signature-content-sorpresa i {
+  color: var(--romantic-primary);
+  font-size: 1.5rem;
+  animation: twinkleGalactic 2s infinite;
+}
+
+/* Sistema de respuesta */
+.response-system-sorpresa {
+  margin: 40px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.response-header-sorpresa {
+  margin-bottom: 30px;
+}
+
+.response-header-sorpresa h4 {
+  font-size: 2rem;
+  color: var(--romantic-text);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.response-subtitle-sorpresa {
+  color: var(--romantic-text-secondary);
+  font-size: 1.2rem;
+}
+
+.response-options-sorpresa {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.btn-response-sorpresa {
+  padding: 20px 30px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-response-sorpresa.accept {
+  background: linear-gradient(135deg, var(--romantic-primary), var(--romantic-secondary));
+  color: white;
+}
+
+.response-glow-sorpresa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: scanLine 3s infinite;
+}
+
+@keyframes scanLine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.btn-response-sorpresa.accept:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 107, 107, 0.5);
+}
+
+.btn-response-sorpresa.maybe {
+  background: rgba(77, 150, 255, 0.1);
+  color: var(--romantic-space);
+  border: 2px solid var(--romantic-space);
+}
+
+.btn-response-sorpresa.maybe:hover {
+  background: var(--romantic-space);
+  color: white;
+}
+
+.btn-response-sorpresa.surprise {
+  background: rgba(157, 78, 221, 0.1);
+  color: var(--romantic-magic);
+  border: 2px solid var(--romantic-magic);
+}
+
+.btn-response-sorpresa.surprise:hover {
+  background: var(--romantic-magic);
+  color: white;
+}
+
+.response-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.response-note-sorpresa {
+  color: var(--romantic-text-secondary);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Firma galáctica */
+.signature-galactic-sorpresa {
+  display: flex;
+  align-items: center;
+  margin: 40px 0 20px;
+}
+
+/* Navegación galáctica */
+.galactic-navigation-sorpresa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  background: rgba(20, 10, 40, 0.9);
+  border-top: 1px solid var(--romantic-border);
+  position: relative;
+  z-index: 5;
+}
+
+.btn-nav-sorpresa {
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  perspective: 1000px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--romantic-text);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+
+.btn-nav-sorpresa:hover {
+  color: var(--romantic-primary);
+  transform: translateY(-2px);
+}
+
+.nav-indicators-sorpresa {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-dot-sorpresa {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.nav-dot-sorpresa.active {
+  background: var(--romantic-primary);
+  transform: scale(1.2);
+}
+
+.nav-dot-sorpresa:hover {
+  background: var(--romantic-secondary);
+}
+
+/* Navegación interestelar */
+.interstellar-navigation-sorpresa {
+  padding: 30px 40px;
+  background: rgba(20, 10, 40, 0.9);
+  border-top: 1px solid var(--romantic-border);
+  text-align: center;
+}
+
+.nav-ship-sorpresa {
+  position: relative;
+  height: 80px;
+  margin-bottom: 30px;
+}
+
+.ship-body-sorpresa {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--romantic-primary), var(--romantic-magic));
+  border-radius: 50% 50% 0 0;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+
+.ship-cockpit-sorpresa {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: var(--romantic-space);
+  border-radius: 50%;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ship-wings-sorpresa {
+  position: absolute;
+  width: 120px;
+  height: 20px;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.wing-sorpresa {
+  width: 50px;
+  height: 20px;
+  background: linear-gradient(90deg, var(--romantic-accent), var(--romantic-primary));
+  border-radius: 0 0 10px 10px;
+}
+
+.wing-sorpresa.left {
+  transform: rotate(-20deg);
+}
+
+.wing-sorpresa.right {
+  transform: rotate(20deg);
+}
+
+.nav-buttons-sorpresa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.btn-nav-galactic-sorpresa {
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 15px 30px;
+  border-radius: 25px;
+  color: var(--romantic-text);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  min-width: 200px;
+  overflow: hidden;
+  border: 1px solid var(--romantic-border);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.btn-nav-galactic-sorpresa:hover {
+  background: rgba(255, 107, 107, 0.1);
+  border-color: var(--romantic-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 107, 107, 0.2);
+}
+
+.nav-content-sorpresa {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.nav-indicators-sorpresa {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-star-sorpresa {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.nav-star-sorpresa.active {
+  background: var(--romantic-primary);
+  box-shadow: 0 0 20px var(--romantic-primary);
+}
+
+.nav-star-sorpresa::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.nav-star-sorpresa.active::before {
+  border-color: var(--romantic-primary);
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 1; }
+}
+
+.nav-coordinates-sorpresa {
+  color: var(--romantic-text-secondary);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Firma galáctica */
+.galactic-signature-sorpresa {
+  padding: 30px 40px;
+  background: rgba(20, 10, 40, 0.9);
+  border-top: 1px solid var(--romantic-border);
+  text-align: center;
+}
+
+.signature-constellation-sorpresa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.constellation-star-sorpresa {
+  width: 8px;
+  height: 8px;
+  background: var(--romantic-accent);
+  border-radius: 50%;
+  animation: twinkleGalactic 2s infinite;
+}
+
+.constellation-line-sorpresa {
+  width: 30px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--romantic-primary), transparent);
+}
+
+.signature-text-sorpresa {
+  font-family: 'English Towne', serif;
+  font-size: 2rem;
+  color: var(--romantic-primary);
+  padding: 0 20px;
+}
+
+.signature-tagline-sorpresa {
+  color: var(--romantic-text-secondary);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Modal galáctico */
+.modal-galactic-sorpresa {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-space-sorpresa {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: linear-gradient(135deg, 
+    rgba(40, 20, 60, 0.95), 
+    rgba(20, 10, 40, 0.95));
+  border-radius: 25px;
+  border: 2px solid var(--romantic-magic);
+  box-shadow: 0 0 50px rgba(157, 78, 221, 0.4);
+  backdrop-filter: blur(20px);
+}
+
+.modal-close-sorpresa {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: var(--romantic-text);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close-sorpresa:hover {
+  background: var(--romantic-primary);
+  transform: rotate(90deg);
+}
+
+.modal-content-sorpresa {
+  padding: 40px;
+}
+
+.modal-header-sorpresa {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.modal-title-sorpresa {
+  font-size: 2.5rem;
+  color: var(--romantic-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.modal-body-sorpresa {
+  color: var(--romantic-text);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Modal de misión */
+.mission-modal-sorpresa {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .universal-container-sorpresa {
+    max-width: 1100px;
+    margin: 15px auto;
+  }
+  
+  .galactic-title-main-sorpresa {
+    font-size: 4rem;
+  }
+  
+  .galactic-subtitle-sorpresa {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .galactic-title-main-sorpresa {
+    font-size: 3.5rem;
+  }
+  
+  .galactic-subtitle-sorpresa {
+    font-size: 1.6rem;
+  }
+  
+  .title-name-sorpresa {
+    font-size: 3rem;
+  }
+  
+  .galactic-message-container-sorpresa {
+    padding: 30px;
+  }
+  
+  .content-spaceship-sorpresa,
+  .content-spaceship-sorpresa.reverse {
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .question-layer-sorpresa {
+    font-size: 1.8rem;
+  }
+  
+  .nav-buttons-sorpresa {
+    flex-direction: column;
+  }
+  
+  .btn-nav-galactic-sorpresa {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  body.galactic-sorpresa {
+    padding: 10px;
+  }
+  
+  .page-center-wrapper {
+    min-height: calc(100vh - 20px);
+  }
+  
+  .universal-container-sorpresa {
+    border-radius: 20px;
+  }
+  
+  .galactic-message-container-sorpresa {
+    padding: 20px;
+  }
+  
+  .galactic-title-main-sorpresa {
+    font-size: 3rem;
+  }
+  
+  .galactic-subtitle-sorpresa {
+    font-size: 1.4rem;
+  }
+  
+  .title-name-sorpresa {
+    font-size: 2.5rem;
+  }
+  
+  .title-for-sorpresa,
+  .title-from-sorpresa {
+    font-size: 1.5rem;
+  }
+  
+  .galactic-phrase-sorpresa {
+    font-size: 1.3rem;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .question-layer-sorpresa {
+    font-size: 1.5rem;
+    white-space: normal;
+    padding: 0 10px;
+  }
+  
+  .content-spaceship-sorpresa,
+  .content-spaceship-sorpresa.reverse {
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .spaceship-cockpit-sorpresa,
+  .spaceship-window-sorpresa {
+    min-width: 100%;
+  }
+  
+  .window-content-sorpresa {
+    height: 250px;
+  }
+  
+  .callout-text-sorpresa {
+    flex-direction: column;
+    font-size: 1.3rem;
+  }
+  
+  .btn-callout-sorpresa {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .playlists-container-sorpresa {
+    grid-template-columns: 1fr;
+  }
+  
+  .response-options-sorpresa {
+    gap: 15px;
+  }
+  
+  .btn-response-sorpresa {
+    min-height: 70px;
+    font-size: 1.1rem;
+    padding: 15px 20px;
+  }
+  
+  .galactic-navigation-sorpresa {
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .control-panel-sorpresa {
+    flex-direction: row;
+    top: 10px;
+    right: 10px;
+    padding: 12px;
+  }
+  
+  .control-label {
+    display: none;
+  }
+  
+  .love-counter-sorpresa,
+  .moment-counter-sorpresa,
+  .secret-counter-sorpresa {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+  
+  .sorpresa-constellation,
+  .romantic-nebula-sorpresa,
+  .love-galaxy-sorpresa {
+    display: none;
+  }
+  
+  .modal-space-sorpresa {
+    max-width: 95%;
+  }
+  
+  .modal-content-sorpresa {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .galactic-title-main-sorpresa {
+    font-size: 2.5rem;
+  }
+  
+  .galactic-subtitle-sorpresa {
+    font-size: 1.2rem;
+  }
+  
+  .title-name-sorpresa {
+    font-size: 2.2rem;
+  }
+  
+  .message-header-sorpresa {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .title-constellation-sorpresa {
+    order: -1;
+  }
+  
+  .galactic-title-sorpresa {
+    min-width: auto;
+  }
+  
+  .interactive-heart-system-sorpresa {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .heart-core-sorpresa {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .heart-core-sorpresa i {
+    font-size: 3rem;
+  }
+  
+  .romantic-planets-sorpresa {
+    display: none;
+  }
+  
+  .mission-callout-sorpresa {
+    padding: 20px;
+  }
+  
+  .stellar-coupons-sorpresa,
+  .stellar-playlists-sorpresa {
+    padding: 20px;
+  }
+  
+  .galactic-message-sorpresa {
+    padding: 15px;
+  }
+  
+  .response-header-sorpresa h4 {
+    font-size: 1.5rem;
+  }
+  
+  .signature-text-sorpresa {
+    font-size: 1.5rem;
+  }
+}
+
+/* Correcciones específicas para elementos que pueden tener conflicto */
+#sorpresaContent {
+  display: none; /* Este contenedor no existe en el HTML actual */
+}
+
+.content-card-sorpresa,
+.card-header-sorpresa,
+.card-icon-sorpresa,
+.card-title-sorpresa,
+.card-content-sorpresa,
+.card-text-sorpresa,
+.texto-magico-sorpresa,
+.card-stats-sorpresa,
+.card-stat-sorpresa,
+.stat-value-sorpresa,
+.stat-label-sorpresa,
+.card-action-sorpresa,
+.btn-card-action-sorpresa,
+.galactic-separator-sorpresa,
+.galactic-line-sorpresa,
+.galactic-heart-sorpresa,
+.coupons-container-galactic,
+.coupons-title-sorpresa {
+  display: none; /* Estos elementos tampoco existen en el HTML */
+}
+
+/* Asegurar que todos los elementos del JS funcionen */
+.english-towne-font {
+  font-family: 'English Towne', serif;
+}
+
+/* Estilos para animaciones del JS */
+.floating-notification-sorpresa {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: var(--romantic-text);
+  padding: 12px 24px;
+  border-radius: 50px;
+  z-index: 10001;
+  font-weight: 600;
+  animation: notificationSorpresa 3s ease-out forwards;
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--romantic-border);
+  text-align: center;
+  max-width: 85%;
+  box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+}
+
+@keyframes notificationSorpresa {
+  0% { 
+    transform: translateX(-50%) translateY(50px); 
+    opacity: 0; 
+  }
+  15% { 
+    transform: translateX(-50%) translateY(0); 
+    opacity: 1; 
+  }
+  85% { 
+    transform: translateX(-50%) translateY(0); 
+    opacity: 1; 
+  }
+  100% { 
+    transform: translateX(-50%) translateY(-50px); 
+    opacity: 0; 
+  }
+}
+
+/* Estilos para partículas del JS */
+.particle-sorpresa {
+  position: absolute;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Estilos para modal del JS */
+.mission-details-sorpresa,
+.image-modal-sorpresa,
+.modal-stat-sorpresa,
+.modal-icon-sorpresa,
+.modal-footer-sorpresa {
+  display: block;
+}
+
+/* Asegurar que los botones del JS sean clickeables */
+.btn-galactic,
+#btnGalacticAccept,
+#btnGalacticMaybe,
+#btnGalacticSurprise,
+#btnCreateCombined {
+  cursor: pointer;
+}

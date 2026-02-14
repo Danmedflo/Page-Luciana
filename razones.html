@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las 5 Razones Galácticas - San Valentín</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Fuentes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="../Pag-Luciana/Styles/Razones.css">
+</head>
+
+<body class="galactic-razones">
+    <!-- Fondo galáctico -->
+    <div class="galaxy-background-razones" id="galaxyBackground"></div>
+    
+    <!-- Partículas galácticas -->
+    <div class="particles-container-galactic" id="particlesContainer"></div>
+
+    <!-- Panel de control galáctico -->
+    <div class="control-panel-razones">
+        <div class="control-item" id="musicControl">
+            <i class="fas fa-music"></i>
+            <span class="control-label">Música</span>
+        </div>
+        <div class="control-item" id="starsControl">
+            <i class="fas fa-star"></i>
+            <span class="control-label">Estrellas</span>
+        </div>
+        <div class="control-item" id="effectsControl">
+            <i class="fas fa-magic"></i>
+            <span class="control-label">Efectos</span>
+        </div>
+    </div>
+
+    <!-- Contador de amor galáctico -->
+    <div class="love-counter-razones">
+        <i class="fas fa-heart"></i>
+        <span>Latidos:</span>
+        <strong id="heartCount">0</strong>
+    </div>
+
+    <!-- Contador secreto galáctico -->
+    <div class="secret-counter-razones">
+        <i class="fas fa-gem"></i>
+        <span>Razones descubiertas:</span>
+        <strong id="reasonsDiscovered">0</strong>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="universal-container-razones">
+        <!-- Constelación de razones -->
+        <div class="razones-constellation">
+            <div class="constellation-star" data-star="R"></div>
+            <div class="constellation-star" data-star="A"></div>
+            <div class="constellation-star" data-star="Z"></div>
+            <div class="constellation-star" data-star="O"></div>
+            <div class="constellation-star" data-star="N"></div>
+            <div class="constellation-star" data-star="E"></div>
+            <div class="constellation-star" data-star="S"></div>
+        </div>
+
+        <!-- Nebulosa romántica -->
+        <div class="romantic-nebula-razones"></div>
+
+        <!-- Mensaje galáctico -->
+        <div class="galactic-message-container">
+            <!-- Marco galáctico -->
+            <div class="galactic-frame-razones">
+                <div class="frame-glow-razones"></div>
+                <div class="frame-particles-razones"></div>
+            </div>
+
+            <!-- Contenido del mensaje -->
+            <div class="message-content-razones">
+                <!-- Encabezado galáctico -->
+                <div class="message-header-razones">
+                    <div class="title-constellation-razones">
+                        <div class="title-star-razones"></div>
+                        <div class="title-star-razones"></div>
+                        <div class="title-star-razones"></div>
+                    </div>
+                    
+                    <div class="galactic-title-razones">
+                        <div class="title-for-razones">Para</div>
+                        <div class="title-name-razones">LUCIANA</div>
+                        <div class="title-from-razones">De tu galaxia favorita</div>
+                    </div>
+                    
+                    <div class="title-constellation-razones">
+                        <div class="title-star-razones"></div>
+                        <div class="title-star-razones"></div>
+                        <div class="title-star-razones"></div>
+                    </div>
+                </div>
+
+                <!-- Separador cósmico -->
+                <div class="cosmic-separator-razones">
+                    <div class="separator-line-razones"></div>
+                    <div class="separator-heart-razones">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="separator-line-razones"></div>
+                </div>
+
+                <!-- Título principal -->
+                <div class="main-title-razones" data-aos="zoom-in">
+                    <h1 class="galactic-title-number">05</h1>
+                    <h2 class="galactic-subtitle">Razones Galácticas<br>Por Las Que Eres Especial</h2>
+                    <p class="galactic-phrase">
+                        <i class="fas fa-quote-left"></i>
+                        No deciden decidir, simplemente son
+                        <i class="fas fa-quote-right"></i>
+                    </p>
+                </div>
+
+                <!-- Indicador de progreso galáctico -->
+                <div class="progress-container-galactic" data-aos="fade-up">
+                    <div class="progress-label-galactic">
+                        <span>Exploración cósmica:</span>
+                        <span id="progressPercentage">0%</span>
+                    </div>
+                    <div class="progress-bar-bg-galactic">
+                        <div class="progress-bar-fill-galactic" id="progressBar">
+                            <div class="progress-bar-glow"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contenedor de razones -->
+                <div id="razonesContent"></div>
+
+                <!-- Separador galáctico -->
+                <div class="galactic-separator-razones">
+                    <div class="galactic-line"></div>
+                    <div class="galactic-heart">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="galactic-line"></div>
+                </div>
+
+                <!-- Señales galácticas -->
+                <div class="signals-container-galactic" data-aos="fade-up">
+                    <h3 class="signals-title">
+                        <i class="fas fa-satellite"></i>
+                        Señales del Universo
+                    </h3>
+                    <div class="signals-grid"></div>
+                </div>
+
+                <!-- Sistema del corazón interactivo -->
+                <div class="interactive-heart-system-razones" data-aos="zoom-in">
+                    <div class="heart-ring razon-ring-1"></div>
+                    <div class="heart-ring razon-ring-2"></div>
+                    <div class="heart-ring razon-ring-3"></div>
+                    
+                    <div class="main-heart razon-heart" id="razonHeart">
+                        <div class="heart-glow razon-glow"></div>
+                        <div class="heart-pulse razon-pulse"></div>
+                        <div class="heart-core razon-core">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="heart-sparkles razon-sparkles">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="love-particles razon-particles" id="razonParticles"></div>
+                </div>
+
+                <!-- Botones de navegación dentro del contenedor (SOLO AL FINAL) -->
+                <div class="navigation-buttons-container" data-aos="fade-up" data-aos-delay="300">
+                    <div class="navigation-buttons-inner">
+                        <button class="nav-btn nav-btn-back" id="backToHome">
+                            <i class="fas fa-arrow-left"></i>
+                            <span>SITEMA ANTERIOR</span>
+                        </button>
+                        <button class="nav-btn nav-btn-next" id="nextSystem">
+                            <span>SIGUIENTE SISTEMA</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <div class="navigation-coordinates">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Coordenadas actuales: Sistema Sorpresa • Sector Romántico</span>
+                    </div>
+                </div>
+
+                <!-- Firma galáctica -->
+                <div class="signature-galactic">
+                    <div class="signature-line-galactic"></div>
+                    <div class="signature-content-galactic">
+                        <i class="fas fa-rocket"></i>
+                        <span>Viaje interestelar del amor</span>
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="signature-line-galactic"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galaxia del amor -->
+        <div class="love-galaxy-razones"></div>
+    </div>
+
+    <!-- Modal galáctico -->
+    <div class="modal-galactic" id="modalGalactic">
+        <div class="modal-space-razones">
+            <button class="modal-close-razones" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content-razones">
+                <div class="modal-body-razones" id="modalBody"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="heartSound" preload="auto">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-heartbeat-love-858.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="spaceSound" preload="auto">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-space-ambience-299.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../Pag-Luciana/Scripts/Razones.js"></script>
+</body>
+</html>

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorpresa Galáctica - San Valentín</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Fuentes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    
+    <!-- Fuente English Towne -->
+    <style>
+        @font-face {
+            font-family: 'English Towne';
+            src: url('../Fonts/EnglishTowne.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+    
+    <!-- CSS personalizados -->
+    <link rel="stylesheet" href="../Pag-Luciana/Styles/Sorpresa.css">
+</head>
+
+<body class="galactic-sorpresa">
+  <!-- ============================================
+       ELEMENTOS FIXED - FUERA DEL FLUJO PRINCIPAL
+       ============================================ -->
+  
+  <!-- Fondo galáctico -->
+  <div class="galaxy-background-sorpresa" id="galaxyBackground"></div>
+  
+  <!-- Efecto de estrellas fugaces -->
+  <div class="shooting-stars-container" id="shootingStars"></div>
+  
+  <!-- Panel de control galáctico - FIXED -->
+  <div class="control-panel-sorpresa">
+    <div class="control-item" id="musicControl">
+      <i class="fas fa-music"></i>
+      <span class="control-label">Música</span>
+    </div>
+    <div class="control-item" id="starsControl">
+      <i class="fas fa-star"></i>
+      <span class="control-label">Efectos</span>
+    </div>
+    <div class="control-item" id="backControl">
+      <i class="fas fa-home"></i>
+      <span class="control-label">Inicio</span>
+    </div>
+  </div>
+
+  <!-- Contadores galácticos - FIXED -->
+  <div class="love-counter-sorpresa">
+    <i class="fas fa-heart"></i>
+    <span>Latidos:</span>
+    <strong id="loveBeats">0</strong>
+  </div>
+
+  <div class="moment-counter-sorpresa">
+    <i class="fas fa-clock"></i>
+    <span>Tiempo juntos:</span>
+    <strong id="connectionTime">00:00</strong>
+  </div>
+
+  <div class="secret-counter-sorpresa">
+    <i class="fas fa-eye"></i>
+    <span>Miradas:</span>
+    <strong id="secretLooks">0</strong>
+  </div>
+
+  <!-- ============================================
+       CONTENEDOR CENTRAL - ESTRUCTURA CORRECTA
+       ============================================ -->
+  
+  <!-- Wrapper exclusivo para centrado -->
+  <div class="page-center-wrapper">
+    
+    <!-- Contenedor universal - AHORA DENTRO DEL WRAPPER -->
+    <div class="universal-container-sorpresa">
+      
+      <!-- Elementos decorativos (absolutos dentro del contenedor) -->
+      <div class="sorpresa-constellation">
+        <div class="constellation-star" data-star="S"></div>
+        <div class="constellation-star" data-star="O"></div>
+        <div class="constellation-star" data-star="R"></div>
+        <div class="constellation-star" data-star="P"></div>
+        <div class="constellation-star" data-star="R"></div>
+        <div class="constellation-star" data-star="E"></div>
+        <div class="constellation-star" data-star="S"></div>
+        <div class="constellation-star" data-star="A"></div>
+      </div>
+
+      <div class="romantic-planets-sorpresa">
+        <div class="planet-sorpresa planet-1"></div>
+        <div class="planet-sorpresa planet-2"></div>
+        <div class="planet-sorpresa planet-3"></div>
+      </div>
+
+      <div class="romantic-nebula-sorpresa"></div>
+      <div class="love-galaxy-sorpresa"></div>
+
+      <!-- Contenedor del mensaje galáctico -->
+      <div class="galactic-message-container-sorpresa">
+        
+        <!-- Marco galáctico -->
+        <div class="galactic-frame-sorpresa">
+          <div class="frame-glow-sorpresa"></div>
+          <div class="frame-particles-sorpresa"></div>
+        </div>
+
+        <!-- Contenido del mensaje -->
+        <div class="message-content-sorpresa">
+          
+          <!-- Encabezado galáctico -->
+          <div class="message-header-sorpresa">
+            <div class="title-constellation-sorpresa">
+              <div class="title-star-sorpresa"></div>
+              <div class="title-star-sorpresa"></div>
+              <div class="title-star-sorpresa"></div>
+            </div>
+            
+            <div class="galactic-title-sorpresa">
+              <div class="title-for-sorpresa">Para</div>
+              <div class="title-name-sorpresa">LUCIANA</div>
+              <div class="title-from-sorpresa">Tu galaxia favorita</div>
+            </div>
+            
+            <div class="title-constellation-sorpresa">
+              <div class="title-star-sorpresa"></div>
+              <div class="title-star-sorpresa"></div>
+              <div class="title-star-sorpresa"></div>
+            </div>
+          </div>
+
+          <!-- Separador cósmico -->
+          <div class="cosmic-separator-sorpresa">
+            <div class="separator-line-sorpresa"></div>
+            <div class="separator-heart-sorpresa">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="separator-line-sorpresa"></div>
+          </div>
+
+          <!-- Título principal -->
+          <div class="main-title-sorpresa" data-aos="zoom-in">
+            <h1 class="galactic-title-main-sorpresa">Sorpresa Galáctica</h1>
+            <h2 class="galactic-subtitle-sorpresa">Un Universo de Momentos Especiales Para Ti</h2>
+            <p class="galactic-phrase-sorpresa">
+              <i class="fas fa-quote-left"></i>
+              Porque cada instante contigo es una nueva constelación
+              <i class="fas fa-quote-right"></i>
+            </p>
+          </div>
+
+          <!-- Pregunta 3D -->
+          <div class="question-3d-container-sorpresa" data-aos="flip-up">
+            <div class="question-3d-sorpresa">
+              <div class="question-layer-sorpresa back">¿Estás dispuesta a amarme toda la vida?</div>
+              <div class="question-layer-sorpresa middle">¿Estás dispuesta a amarme toda la vida?</div>
+              <div class="question-layer-sorpresa front">¿Estás dispuesta a amarme toda la vida?</div>
+            </div>
+          </div>
+
+          <!-- Nave de contenido con imagen -->
+          <div class="content-spaceship-sorpresa" data-aos="fade-right">
+            <div class="spaceship-cockpit-sorpresa">
+              <div class="cockpit-content-sorpresa">
+                <h3 class="cockpit-title-sorpresa">
+                  <i class="fas fa-comet"></i>
+                  Nuestra Historia Cósmica
+                </h3>
+                <p class="cockpit-text-sorpresa">
+                  Después de que el universo hiciera su magia y las galaxias alinearan nuestros destinos, quedó claro algo: quiero vivir este 14 de febrero contigo. Mi corazón —la única fuente confiable en estos temas intergalácticos— lo tiene claro desde el Big Bang.
+                </p>
+                <p class="cockpit-text-sorpresa">
+                  Imagino ese día perfecto: un viaje bajo las estrellas del atardecer, una cena interestelar donde el tiempo parece detenerse, y sobre todo, tu compañía que hace que todo cobre sentido. Eres la estrella que mi universo siempre necesitó.
+                </p>
+                <div class="cosmic-stats-sorpresa">
+                  <div class="cosmic-stat-sorpresa">
+                    <i class="fas fa-bolt"></i>
+                    <span>Compatibilidad: 99.9%</span>
+                  </div>
+                  <div class="cosmic-stat-sorpresa">
+                    <i class="fas fa-infinity"></i>
+                    <span>Duración: Eterna</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="spaceship-window-sorpresa">
+              <div class="window-frame-sorpresa">
+                <div class="window-content-sorpresa">
+                  <img src="../Pag-Luciana/Imagenes/Paisaje.jpg" alt="Paisaje cósmico" class="window-image-sorpresa">
+                  <div class="window-overlay-sorpresa">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                    <span>Ver en máxima resolución</span>
+                  </div>
+                </div>
+                <div class="window-caption-sorpresa">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Coordenadas: 14.02.2024 - Nuestro primer San Valentín interestelar
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nave inversa -->
+          <div class="content-spaceship-sorpresa reverse" data-aos="fade-left">
+            <div class="spaceship-window-sorpresa">
+              <div class="window-frame-sorpresa">
+                <div class="window-content-sorpresa">
+                  <img src="../Pag-Luciana/Imagenes/Boda.jpg" alt="Futuro cósmico" class="window-image-sorpresa">
+                  <div class="window-overlay-sorpresa">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                    <span>Visualizar futuro</span>
+                  </div>
+                </div>
+                <div class="window-caption-sorpresa">
+                  <i class="fas fa-calendar-star"></i>
+                  Proyección temporal: Momentos que quiero vivir contigo en todas las líneas temporales
+                </div>
+              </div>
+            </div>
+            <div class="spaceship-cockpit-sorpresa">
+              <div class="cockpit-content-sorpresa">
+                <h3 class="cockpit-title-sorpresa">
+                  <i class="fas fa-rocket"></i>
+                  Nuestra Misión Espacial
+                </h3>
+                <p class="cockpit-text-sorpresa">
+                  Cada día a tu lado es una nueva galaxia por explorar, y no puedo esperar para seguir cartografiando nuestro universo juntos. Este San Valentín quiero que sea especial porque tú eres la estrella más brillante en mi firmamento.
+                </p>
+                <p class="cockpit-text-sorpresa">
+                  Quiero celebrar esa energía cósmica que crece cada vez que te veo, cada vez que escucho tu risa resonar en el vacío espacial, cada vez que compartimos un momento fuera del tiempo.
+                </p>
+                <div class="mission-progress-sorpresa">
+                  <div class="progress-label-sorpresa">
+                    <span>Preparación de la misión:</span>
+                    <span class="progress-percent-sorpresa">85%</span>
+                  </div>
+                  <div class="progress-bar-sorpresa">
+                    <div class="progress-fill-sorpresa" style="width: 85%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Llamado a la misión -->
+          <div class="mission-callout-sorpresa" data-aos="zoom-in-up">
+            <div class="callout-header-sorpresa">
+              <div class="callout-icon-sorpresa">
+                <i class="fas fa-satellite"></i>
+              </div>
+              <h3 class="callout-title-sorpresa">Transmisión de misión recibida</h3>
+            </div>
+            <div class="callout-body-sorpresa">
+              <p class="callout-text-sorpresa">
+                <i class="fas fa-heart corazon-latido-sorpresa"></i>
+                ¿Aceptas la misión de ser mi San Valentín interestelar?
+                <i class="fas fa-heart corazon-latido-sorpresa"></i>
+              </p>
+              <div class="callout-actions-sorpresa">
+                <button class="btn-callout-sorpresa accept" id="btnAcceptMission">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Aceptar misión</span>
+                </button>
+                <button class="btn-callout-sorpresa details" id="btnMissionDetails">
+                  <i class="fas fa-info-circle"></i>
+                  <span>Ver detalles de misión</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sección de cupones estelares -->
+          <div class="stellar-coupons-sorpresa" data-aos="fade-up">
+            <div class="coupons-header-sorpresa">
+              <h3 class="english-towne-font">
+                <i class="fas fa-gem"></i>
+                Cupones Estelares Exclusivos
+              </h3>
+              <p class="coupons-subtitle-sorpresa">
+                Tu acceso a experiencias cósmicas especiales
+              </p>
+            </div>
+            
+            <div class="coupons-grid-sorpresa" id="couponsGrid">
+              <!-- Los cupones se cargan dinámicamente -->
+            </div>
+            
+            <div class="coupons-note-sorpresa">
+              <i class="fas fa-info-circle"></i>
+              Los cupones pueden canjearse en cualquier momento del continuo espacio-temporal
+            </div>
+          </div>
+
+          <!-- Sistema del corazón interactivo -->
+          <div class="interactive-heart-system-sorpresa" data-aos="zoom-in">
+            <div class="heart-ring-sorpresa ring-1"></div>
+            <div class="heart-ring-sorpresa ring-2"></div>
+            <div class="heart-ring-sorpresa ring-3"></div>
+            
+            <div class="main-heart-sorpresa" id="mainHeartSorpresa">
+              <div class="heart-glow-sorpresa"></div>
+              <div class="heart-pulse-sorpresa"></div>
+              <div class="heart-core-sorpresa">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="heart-sparkles-sorpresa">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sección de playlist estelar -->
+          <div class="stellar-playlists-sorpresa" data-aos="fade-up">
+            <div class="playlists-header-sorpresa">
+              <h3>
+                <i class="fas fa-music"></i>
+                Bandas Sonoras de Nuestra Galaxia
+              </h3>
+              <p class="playlists-subtitle-sorpresa">
+                Selecciones musicales para viajar por nuestro universo emocional
+              </p>
+            </div>
+            
+            <div class="playlists-container-sorpresa">
+              <!-- Playlist Daniel -->
+              <div class="playlist-card-sorpresa" data-aos="zoom-in" data-aos-delay="100">
+                <div class="playlist-cover-sorpresa">
+                  <div class="cover-image-sorpresa" style="background: linear-gradient(135deg, #ff6b6b, #4d96ff);">
+                    <i class="fas fa-user-astronaut"></i>
+                  </div>
+                  <div class="cover-glow-sorpresa"></div>
+                </div>
+                <div class="playlist-info-sorpresa">
+                  <h4 class="playlist-title-sorpresa">Universo Daniel</h4>
+                  <p class="playlist-description-sorpresa">
+                    Sonidos que definen mi galaxia emocional cuando pienso en ti
+                  </p>
+                  <div class="playlist-stats-sorpresa">
+                    <span><i class="fas fa-clock"></i> 14h 56m</span>
+                    <span><i class="fas fa-heart"></i> 242 temas</span>
+                  </div>
+                  <a href="https://open.spotify.com/playlist/5CmaZbELLvb6SYcBA3RBBe?si=ee0e6e48497c4ba9&pt=2eaef39ee5e30708e7e136edf8ded5fa" 
+                     target="_blank" class="btn-playlist-sorpresa">
+                    <i class="fab fa-spotify"></i>
+                    Explorar playlist
+                  </a>
+                </div>
+              </div>
+              
+              <!-- Playlist Luciana -->
+              <div class="playlist-card-sorpresa" data-aos="zoom-in" data-aos-delay="200">
+                <div class="playlist-cover-sorpresa">
+                  <div class="cover-image-sorpresa" style="background: linear-gradient(135deg, #9d4edd, #ffd93d);">
+                    <i class="fas fa-user-circle"></i>
+                  </div>
+                  <div class="cover-glow-sorpresa"></div>
+                </div>
+                <div class="playlist-info-sorpresa">
+                  <h4 class="playlist-title-sorpresa">Galaxia Luciana</h4>
+                  <p class="playlist-description-sorpresa">
+                    Melodías que imagino resonando en tu universo personal
+                  </p>
+                  <div class="playlist-stats-sorpresa">
+                    <span><i class="fas fa-clock"></i> 10h 11m</span>
+                    <span><i class="fas fa-star"></i> 165 temas</span>
+                  </div>
+                  <a href="https://open.spotify.com/playlist/5JoK3Y7BCBzgAvToLKBIoO?si=a5c8fe68d8d54315" 
+                     target="_blank" class="btn-playlist-sorpresa">
+                    <i class="fab fa-spotify"></i>
+                    Explorar playlist
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mensaje final galáctico -->
+          <div class="galactic-message-sorpresa" data-aos="flip-up">
+            <div class="message-container-sorpresa">
+              <div class="message-header-sorpresa">
+                <div class="message-icon-sorpresa">
+                  <i class="fas fa-envelope-open-text"></i>
+                </div>
+                <h4 class="message-title-sorpresa english-towne-font">Transmisión Final</h4>
+              </div>
+              <div class="message-content-sorpresa">
+                <p class="message-text-sorpresa">
+                  Este 14 de febrero quiero que sea el primer punto de luz en nuestra constelación de momentos especiales. Eres el fenómeno astronómico más hermoso que he tenido el privilegio de observar.
+                </p>
+                <p class="message-text-sorpresa">
+                  Cada átomo de mi ser gravita hacia ti, y este mensaje es solo el comienzo de todo lo que quiero construir en nuestro universo compartido.
+                </p>
+                <div class="message-quote-sorpresa">
+                  <i class="fas fa-quote-left"></i>
+                  <span>En un universo infinito, encontrarte fue el evento más improbable y más hermoso</span>
+                  <i class="fas fa-quote-right"></i>
+                </div>
+              </div>
+              <div class="message-signature-sorpresa">
+                <div class="signature-line-sorpresa"></div>
+                <div class="signature-content-sorpresa">
+                  <i class="fas fa-heart-circle"></i>
+                  <span class="signature-text-sorpresa">Con todo el amor del cosmos</span>
+                  <i class="fas fa-heart-circle"></i>
+                </div>
+                <div class="signature-line-sorpresa"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sistema de respuesta -->
+          <div class="response-system-sorpresa" data-aos="zoom-in">
+            <div class="response-header-sorpresa">
+              <h4>
+                <i class="fas fa-satellite-dish"></i>
+                Sistema de Respuesta Galáctica
+              </h4>
+              <p class="response-subtitle-sorpresa">
+                Transmite tu respuesta a través del hiperespacio
+              </p>
+            </div>
+            <div class="response-options-sorpresa">
+              <button class="btn-response-sorpresa accept" id="btnGalacticAccept">
+                <div class="response-glow-sorpresa"></div>
+                <div class="response-content">
+                  <i class="fas fa-check-double"></i>
+                  <span>Aceptar misión completa</span>
+                </div>
+              </button>
+              
+              <button class="btn-response-sorpresa maybe" id="btnGalacticMaybe">
+                <div class="response-content">
+                  <i class="fas fa-question-circle"></i>
+                  <span>Necesito más información</span>
+                </div>
+              </button>
+              
+              <button class="btn-response-sorpresa surprise" id="btnGalacticSurprise">
+                <div class="response-content">
+                  <i class="fas fa-gift"></i>
+                  <span>¡Sorpréndeme más!</span>
+                </div>
+              </button>
+            </div>
+            <div class="response-note-sorpresa">
+              <i class="fas fa-broadcast-tower"></i>
+              Tu respuesta será transmitida a través de 14 dimensiones
+            </div>
+          </div>
+
+          <!-- Firma galáctica -->
+          <div class="signature-galactic-sorpresa">
+            <div class="signature-line-sorpresa"></div>
+            <div class="signature-content-sorpresa">
+              <i class="fas fa-rocket"></i>
+              <span>Sorpresa diseñada con tecnología de curvatura emocional</span>
+              <i class="fas fa-rocket"></i>
+            </div>
+            <div class="signature-line-sorpresa"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sistema de navegación interestelar -->
+      <div class="interstellar-navigation-sorpresa">
+        <div class="nav-ship-sorpresa">
+          <div class="ship-body-sorpresa">
+            <div class="ship-cockpit-sorpresa"></div>
+            <div class="ship-wings-sorpresa">
+              <div class="wing-sorpresa left"></div>
+              <div class="wing-sorpresa right"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="nav-buttons-sorpresa">
+          <button class="btn-nav-galactic-sorpresa"
+            onclick="window.location.href='index.html'">
+            <div class="nav-trail-sorpresa"></div>
+            <div class="nav-content-sorpresa">
+              <i class="fas fa-arrow-left"></i>
+              <span>VOLVER AL INICIO</span>
+            </div>
+          </button>
+          
+          <div class="nav-indicators-sorpresa">
+            <div class="nav-star-sorpresa active" data-page="sorpresa"></div>
+            <div class="nav-star-sorpresa" data-page="razones"></div>
+            <div class="nav-star-sorpresa" data-page="futuro"></div>
+          </div>
+          
+          <button class="btn-nav-galactic-sorpresa"
+            onclick="window.location.href='razones.html'">
+            <div class="nav-trail-sorpresa"></div>
+            <div class="nav-content-sorpresa">
+              <span>SIGUIENTE SISTEMA</span>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </button>
+        </div>
+        
+        <div class="nav-coordinates-sorpresa">
+          <i class="fas fa-map-marked-alt"></i>
+          <span>Coordenadas actuales: Sistema Sorpresa • Sector Romántico</span>
+        </div>
+      </div>
+      
+      <!-- Firma galáctica -->
+      <div class="galactic-signature-sorpresa">
+        <div class="signature-constellation-sorpresa">
+          <div class="constellation-star-sorpresa"></div>
+          <div class="constellation-star-sorpresa"></div>
+          <div class="constellation-star-sorpresa"></div>
+          <div class="constellation-line-sorpresa"></div>
+          <div class="signature-text-sorpresa">DANMEDFLO</div>
+          <div class="constellation-line-sorpresa"></div>
+          <div class="constellation-star-sorpresa"></div>
+          <div class="constellation-star-sorpresa"></div>
+          <div class="constellation-star-sorpresa"></div>
+        </div>
+        <div class="signature-tagline-sorpresa">
+          <i class="fas fa-rocket"></i>
+          <span>Diseñado con tecnología de curvatura emocional</span>
+          <i class="fas fa-rocket"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal galáctico -->
+  <div class="modal-galactic-sorpresa" id="modalSorpresa">
+    <div class="modal-space-sorpresa">
+      <button class="modal-close-sorpresa" id="modalCloseSorpresa">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="modal-content-sorpresa">
+        <div class="modal-body-sorpresa" id="modalBodySorpresa"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de misión -->
+  <div class="mission-modal-sorpresa" id="missionModal">
+    <div class="modal-space-sorpresa">
+      <button class="modal-close-sorpresa" id="modalClose">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="modal-content-sorpresa">
+        <div class="modal-header-sorpresa">
+          <h2 class="modal-title-sorpresa">
+            <i class="fas fa-clipboard-list"></i>
+            Detalles de la Misión
+          </h2>
+          <div class="mission-level-sorpresa">
+            <span class="level-badge-sorpresa">NIVEL: ESPECIAL</span>
+          </div>
+        </div>
+        <div class="modal-body-sorpresa">
+          <!-- Contenido dinámico -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio de ambiente -->
+  <audio id="ambientMusicSorpresa" preload="auto">
+    <source src="https://assets.mixkit.co/music/preview/mixkit-serene-view-443.mp3" type="audio/mpeg">
+  </audio>
+  
+  <audio id="heartbeatSoundSorpresa" preload="auto">
+    <source src="https://assets.mixkit.co/sfx/preview/mixkit-heartbeat-love-858.mp3" type="audio/mpeg">
+  </audio>
+  
+  <audio id="magicSoundSorpresa" preload="auto">
+    <source src="https://assets.mixkit.co/sfx/preview/mixkit-magic-sparkle-300.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../Pag-Luciana/Scripts/Sorpresa.js"></script>
+</body>
+</html>

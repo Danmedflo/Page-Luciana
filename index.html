@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensaje Especial para Luciana - San Valentín</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Animate.css para animaciones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Fuentes Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  
+  <!-- CSS personalizados -->
+  <link rel="stylesheet" href="../Pag-Luciana/Styles/Fondo.css">
+  <link rel="stylesheet" href="../Pag-Luciana/Styles/index.css">
+</head>
+
+<body class="galactic-index">
+
+  <!-- Fondo con corazones parpadeantes -->
+  <div class="heart-background" id="heartBackground"></div>
+  
+  <!-- Fondo galáctico principal -->
+  <div class="galaxy-background-index" id="galaxyBackground"></div>
+  
+  <!-- Portal dimensional central -->
+  <div class="dimensional-portal" id="dimensionalPortal"></div>
+  
+  <!-- Panel de control flotante -->
+  <div class="control-panel-index">
+    <div class="control-item" id="musicControl">
+      <i class="fas fa-music"></i>
+      <span class="control-label">Música</span>
+    </div>
+    <div class="control-item" id="effectsControl">
+      <i class="fas fa-magic"></i>
+      <span class="control-label">Efectos</span>
+    </div>
+    <div class="control-item" id="secretControl">
+      <i class="fas fa-lock"></i>
+      <span class="control-label">Secreto</span>
+    </div>
+  </div>
+
+  <!-- Contador de amor -->
+  <div class="love-counter">
+    <i class="fas fa-heart"></i>
+    <span>Latidos compartidos: <strong id="loveBeats">0</strong></span>
+  </div>
+
+  <!-- Tiempo de conexión -->
+  <div class="connection-timer">
+    <i class="fas fa-infinity"></i>
+    <span id="connectionTime">00:00</span>
+  </div>
+
+  <div class="universal-container-index">
+    <!-- Constelación de Luciana -->
+    <div class="luciana-constellation">
+      <div class="constellation-star" data-star="L"></div>
+      <div class="constellation-star" data-star="U"></div>
+      <div class="constellation-star" data-star="C"></div>
+      <div class="constellation-star" data-star="I"></div>
+      <div class="constellation-star" data-star="A"></div>
+      <div class="constellation-star" data-star="N"></div>
+      <div class="constellation-star" data-star="A"></div>
+    </div>
+    
+    <!-- Nebulosa romántica -->
+    <div class="romantic-nebula"></div>
+    
+    <!-- Galaxia del amor -->
+    <div class="love-galaxy"></div>
+    
+    <!-- Contenedor principal del mensaje -->
+    <div class="message-container" data-aos="zoom-in" data-aos-duration="1500">
+      
+      <!-- Marco galáctico -->
+      <div class="galactic-frame">
+        <div class="frame-glow"></div>
+        <div class="frame-particles"></div>
+        <div class="frame-orbit">
+          <div class="orbiting-heart"><i class="fas fa-heart"></i></div>
+          <div class="orbiting-heart"><i class="fas fa-star"></i></div>
+          <div class="orbiting-heart"><i class="fas fa-moon"></i></div>
+        </div>
+      </div>
+      
+      <!-- Contenido del mensaje -->
+      <div class="message-content">
+        
+        <!-- Encabezado especial -->
+        <div class="message-header">
+          <div class="title-constellation">
+            <div class="title-star"></div>
+            <div class="title-star"></div>
+            <div class="title-star"></div>
+            <h1 class="galactic-title">
+              <span class="title-for">Para</span>
+              <span class="title-name">Luciana</span>
+              <span class="title-from">de Daniel</span>
+            </h1>
+            <div class="title-star"></div>
+            <div class="title-star"></div>
+            <div class="title-star"></div>
+          </div>
+        </div>
+        
+        <!-- Separador galáctico -->
+        <div class="cosmic-separator">
+          <div class="separator-dot"></div>
+          <div class="separator-line"></div>
+          <div class="separator-heart">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <div class="separator-line"></div>
+          <div class="separator-dot"></div>
+        </div>
+        
+        <!-- Mensaje principal -->
+        <div class="main-message">
+          <div class="message-text reveal-text" id="messageText">
+            <p class="message-line line-1">
+              <span class="word w1">Te</span>
+              <span class="word w2">tengo</span>
+              <span class="word w3">una</span>
+              <span class="word w4">sorpresa.</span>
+            </p>
+            <p class="message-line line-2">
+              <span class="word w5">Para</span>
+              <span class="word w6">descubrirla</span>
+              <span class="word w7">da</span>
+              <span class="word w8">click</span>
+              <span class="word w9">sobre</span>
+              <span class="word w10">el</span>
+              <span class="word w11">corazón</span>
+            </p>
+          </div>
+          
+          <!-- Firma especial -->
+          <div class="message-signature">
+            <div class="signature-line"></div>
+            <div class="signature-content">
+              <i class="fas fa-heart-circle"></i>
+              <span class="signature-text">Con todo mi amor</span>
+              <i class="fas fa-heart-circle"></i>
+            </div>
+            <div class="signature-line"></div>
+          </div>
+        </div>
+        
+        <!-- Sistema del corazón interactivo -->
+        <div class="interactive-heart-system" id="heartSystem">
+          <!-- Anillos de energía -->
+          <div class="heart-ring ring-1"></div>
+          <div class="heart-ring ring-2"></div>
+          <div class="heart-ring ring-3"></div>
+          
+          <!-- Corazón principal -->
+          <div class="main-heart" id="mainHeart">
+            <div class="heart-glow"></div>
+            <div class="heart-pulse"></div>
+            <div class="heart-core">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="heart-sparkles">
+              <i class="fas fa-sparkle"></i>
+              <i class="fas fa-sparkle"></i>
+              <i class="fas fa-sparkle"></i>
+            </div>
+          </div>
+          
+          <!-- Partículas de amor -->
+          <div class="love-particles"></div>
+        </div>
+        
+        <!-- Instrucción flotante -->
+        <div class="floating-instruction">
+          <i class="fas fa-hand-point-up"></i>
+          <span class="instruction-text">Haz clic en el corazón</span>
+          <div class="instruction-arrow">
+            <i class="fas fa-arrow-down"></i>
+          </div>
+        </div>
+        
+        <!-- Efectos de texto flotante -->
+        <div class="floating-effects">
+          <div class="floating-effect effect-1">❤️</div>
+          <div class="floating-effect effect-2">✨</div>
+          <div class="floating-effect effect-3">🌟</div>
+          <div class="floating-effect effect-4">💫</div>
+        </div>
+        
+        <!-- Contador de tiempo antes de click -->
+        <div class="anticipation-timer">
+          <div class="timer-label">Tu sorpresa espera...</div>
+          <div class="timer-display">
+            <span class="timer-digit" id="timerDigit">5</span>
+            <span class="timer-text">segundos de magia</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Efecto de brillo del mensaje -->
+      <div class="message-glow"></div>
+    </div>
+    
+    <!-- Sistema de partículas -->
+    <div class="particle-system" id="particleSystem"></div>
+    
+    <!-- Panel de información romántica -->
+    <div class="romantic-info" data-aos="fade-up" data-aos-delay="500">
+      <div class="info-item">
+        <i class="fas fa-calendar-heart"></i>
+        <span>Fecha especial: 14 Febrero</span>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-user-astronaut"></i>
+        <span>Destinataria: Luciana</span>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-rocket"></i>
+        <span>Mensajero: Daniel</span>
+      </div>
+    </div>
+    
+    <!-- Contador secreto -->
+    <div class="secret-counter">
+      <i class="fas fa-eye"></i>
+      <span>Miradas de amor: <strong id="secretLooks">0</strong></span>
+    </div>
+  </div>
+
+  <!-- Modal de secreto especial -->
+  <div class="secret-modal" id="secretModal">
+    <div class="modal-space">
+      <button class="modal-close" id="modalClose">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="modal-content">
+        <div class="secret-header">
+          <i class="fas fa-gem"></i>
+          <h3>Mensaje Secreto</h3>
+          <i class="fas fa-gem"></i>
+        </div>
+        <div class="secret-body">
+          <p class="secret-text">
+            Cada vez que miras esta página, mi corazón late un poco más fuerte. 
+            Esta sorpresa fue creada con cada latido pensando en ti.
+          </p>
+          <div class="secret-stats">
+            <div class="secret-stat">
+              <i class="fas fa-heartbeat"></i>
+              <span>Latidos dedicados: <strong id="dedicatedBeats">∞</strong></span>
+            </div>
+            <div class="secret-stat">
+              <i class="fas fa-infinity"></i>
+              <span>Duración del amor: Eterna</span>
+            </div>
+          </div>
+        </div>
+        <button class="btn-secret-action" onclick="crearLluviaDeAmor()">
+          <i class="fas fa-heart-circle-plus"></i>
+          Recibir amor extra
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio de ambiente -->
+  <audio id="ambientMusic" loop preload="auto">
+    <source src="https://assets.mixkit.co/music/preview/mixkit-serene-view-443.mp3" type="audio/mpeg">
+  </audio>
+  
+  <audio id="heartbeatSound" preload="auto">
+    <source src="https://assets.mixkit.co/sfx/preview/mixkit-heartbeat-love-858.mp3" type="audio/mpeg">
+  </audio>
+  
+  <audio id="magicSound" preload="auto">
+    <source src="https://assets.mixkit.co/sfx/preview/mixkit-magic-sparkle-300.mp3" type="audio/mpeg">
+  </audio>
+  
+  <audio id="starSound" preload="auto">
+    <source src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../Pag-Luciana/Scripts/Fondo.js"></script>
+  <script src="../Pag-Luciana/Scripts/Index.js"></script>
+</body>
+</html>

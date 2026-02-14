@@ -1,0 +1,175 @@
+/* ============================================
+   ESTILOS PARA EL FONDO CON CORAZONES
+   ============================================ */
+
+/* Variables de color para el fondo */
+:root {
+  --bg-heart-color-1: #ff9ac8;
+  --bg-heart-color-2: #ff6b9d;
+  --bg-heart-color-3: #ff4081;
+  --bg-heart-color-4: #e91e63;
+  --bg-heart-color-5: #d63384;
+  --bg-heart-color-6: #e83e8c;
+  --bg-heart-color-7: #ffccd5;
+  --bg-heart-color-8: #ffb6c1;
+  --bg-heart-color-9: #ff1493;
+  --bg-heart-color-10: #db7093;
+}
+
+/* Fondo base - SOLO para el contenedor del fondo */
+body {
+  margin: 0;
+  background-color: #fff9fb;
+  min-height: 100vh;
+  position: relative;
+  /* REMOVER overflow: hidden de aquí */
+}
+
+/* Contenedor del fondo con corazones - CORREGIDO */
+.heart-background {
+  position: fixed; /* Mantener fixed para que siga al scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  /* REMOVER overflow: hidden de aquí también */
+}
+
+/* Corazones estáticos (parpadeantes) */
+.heart-bg-static {
+  position: absolute;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Corazones móviles */
+.heart-bg-moving {
+  position: absolute;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Corazones de explosión */
+.heart-bg-explosion {
+  position: fixed; /* Fixed para que no se muevan con el scroll */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 2;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Corazones de lluvia */
+.heart-bg-rain {
+  position: fixed; /* Fixed para que caigan en la ventana visible */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Animación de parpadeo para corazones estáticos */
+@keyframes heartBlink {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.8) rotate(0deg);
+  }
+  50% {
+    opacity: var(--heart-opacity);
+    transform: scale(var(--heart-scale)) rotate(var(--heart-rotate));
+  }
+}
+
+/* Animación para corazones móviles */
+@keyframes movingHeartBlink {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes movingHeartFloat {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(var(--move-x-1), var(--move-y-1)) rotate(90deg);
+  }
+  50% {
+    transform: translate(var(--move-x-2), var(--move-y-2)) rotate(180deg);
+  }
+  75% {
+    transform: translate(var(--move-x-3), var(--move-y-3)) rotate(270deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+/* Animación para explosión de corazones */
+@keyframes heartExplosion {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(var(--explode-x), var(--explode-y)) scale(0) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+/* Animación para lluvia de corazones - CORREGIDA */
+@keyframes heartRain {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(calc(100vh + 50px)) rotate(360deg); /* Usar calc con vh */
+    opacity: 0;
+  }
+}
+
+/* Responsive para el fondo */
+@media (max-width: 768px) {
+  .heart-bg-static {
+    font-size: 20px !important;
+  }
+  
+  .heart-bg-moving {
+    font-size: 24px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .heart-bg-static {
+    font-size: 16px !important;
+  }
+  
+  .heart-bg-moving {
+    font-size: 20px !important;
+  }
+}

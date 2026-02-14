@@ -1,0 +1,1298 @@
+/* ============================================
+   ESTILOS GALÁCTICOS ROMÁNTICOS PARA INDEX.HTML
+   ============================================ */
+
+:root {
+  --romantic-primary: #ff6b6b;
+  --romantic-secondary: #ff8e8e;
+  --romantic-accent: #ffd93d;
+  --romantic-space: #4d96ff;
+  --romantic-magic: #9d4edd;
+  --romantic-success: #6bcf7f;
+  --romantic-bg: #0a0a1a;
+  --romantic-space-dark: #050510;
+  --romantic-text: #ffffff;
+  --romantic-text-secondary: #ffb6c1;
+  --romantic-border: rgba(255, 107, 107, 0.3);
+  --romantic-glow: rgba(255, 107, 107, 0.5);
+}
+
+/* Fondo galáctico romántico */
+body.galactic-index {
+  background: linear-gradient(180deg, 
+    var(--romantic-space-dark) 0%, 
+    #1a0a2a 30%, 
+    #2a0a3a 60%, 
+    var(--romantic-bg) 100%) !important;
+  color: var(--romantic-text);
+  font-family: 'Poppins', 'Roboto', 'Great Vibes', cursive;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Fondo de galaxia romántica */
+.galaxy-background-index {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.estrella-romantica {
+  position: absolute;
+  border-radius: 50%;
+  animation: twinkle 4s infinite;
+}
+
+.estrella-fugaz-romantica {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9997;
+}
+
+/* Portal dimensional romántico */
+.dimensional-portal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  z-index: 9996;
+  pointer-events: none;
+  background: radial-gradient(circle, 
+    rgba(255, 107, 107, 0.1) 0%, 
+    rgba(157, 78, 221, 0.05) 50%,
+    transparent 100%);
+}
+
+.dimensional-portal.active {
+  animation: portalRomantic 2.5s ease-out forwards;
+}
+
+@keyframes portalRomantic {
+  0% { width: 0; height: 0; opacity: 0; }
+  50% { width: 400px; height: 400px; opacity: 0.6; }
+  100% { width: 1200px; height: 1200px; opacity: 0; }
+}
+
+/* Panel de control romántico */
+.control-panel-index {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+  background: rgba(255, 107, 107, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 15px;
+  border-radius: 20px;
+  border: 1px solid var(--romantic-border);
+  box-shadow: 0 10px 30px rgba(255, 107, 107, 0.2);
+}
+
+.control-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 15px;
+  transition: all 0.3s;
+  color: var(--romantic-text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.control-item:hover {
+  background: rgba(255, 107, 107, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+}
+
+.control-item.active {
+  background: rgba(107, 207, 127, 0.2);
+  color: var(--romantic-success);
+  box-shadow: 0 0 20px rgba(107, 207, 127, 0.3);
+}
+
+.control-item i {
+  font-size: 1.6rem;
+}
+
+.control-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Contadores románticos */
+.love-counter {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 107, 107, 0.1);
+  color: var(--romantic-text);
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  z-index: 1000;
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--romantic-border);
+  box-shadow: 0 5px 20px rgba(255, 107, 107, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s;
+}
+
+.love-counter i {
+  color: var(--romantic-primary);
+  font-size: 1.3rem;
+  animation: heartbeat 1.5s infinite;
+}
+
+.love-counter strong {
+  color: var(--romantic-secondary);
+  font-size: 1.3rem;
+}
+
+.connection-timer {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(77, 150, 255, 0.1);
+  color: var(--romantic-text);
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-family: 'Poppins', monospace;
+  font-size: 1.2rem;
+  font-weight: bold;
+  z-index: 1000;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(77, 150, 255, 0.3);
+  box-shadow: 0 5px 20px rgba(77, 150, 255, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s;
+}
+
+.connection-timer.special-minute {
+  background: rgba(255, 217, 61, 0.2);
+  border-color: var(--romantic-accent);
+  color: var(--romantic-accent);
+  transform: scale(1.1);
+  animation: pulseGlow 2s infinite;
+}
+
+.connection-timer i {
+  color: var(--romantic-space);
+  font-size: 1.3rem;
+}
+
+/* Contenedor universal romántico */
+.universal-container-index {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  z-index: 2;
+  padding: 40px 20px;
+}
+
+/* Constelación de Luciana */
+.luciana-constellation {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 250px;
+  height: 250px;
+  pointer-events: none;
+  filter: drop-shadow(0 0 10px rgba(255, 107, 107, 0.5));
+}
+
+.luciana-constellation .constellation-star {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--romantic-secondary);
+  border-radius: 50%;
+  animation: twinkle 3s infinite;
+  box-shadow: 0 0 15px var(--romantic-secondary);
+}
+
+.luciana-constellation .constellation-star:nth-child(1) { top: 20%; left: 30%; }
+.luciana-constellation .constellation-star:nth-child(2) { top: 40%; left: 10%; }
+.luciana-constellation .constellation-star:nth-child(3) { top: 60%; left: 40%; }
+.luciana-constellation .constellation-star:nth-child(4) { top: 80%; left: 20%; }
+.luciana-constellation .constellation-star:nth-child(5) { top: 30%; left: 70%; }
+.luciana-constellation .constellation-star:nth-child(6) { top: 50%; left: 80%; }
+.luciana-constellation .constellation-star:nth-child(7) { top: 70%; left: 60%; }
+
+.luciana-constellation .constellation-star::after {
+  content: attr(data-star);
+  position: absolute;
+  top: -25px;
+  left: -5px;
+  color: var(--romantic-text-secondary);
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Nebulosa romántica */
+.romantic-nebula {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, 
+    rgba(255, 107, 107, 0.15) 0%, 
+    rgba(157, 78, 221, 0.1) 30%,
+    transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.4;
+  pointer-events: none;
+  animation: float 20s infinite ease-in-out;
+}
+
+/* Galaxia del amor */
+.love-galaxy {
+  position: absolute;
+  bottom: 15%;
+  left: 15%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, 
+    rgba(255, 182, 193, 0.2) 0%, 
+    rgba(255, 107, 107, 0.1) 40%,
+    transparent 80%);
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.3;
+  pointer-events: none;
+  animation: rotateGalaxy 30s infinite linear;
+}
+
+@keyframes rotateGalaxy {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Contenedor del mensaje */
+.message-container {
+  position: relative;
+  width: 800px;
+  max-width: 90%;
+  z-index: 3;
+  background: rgba(20, 10, 40, 0.7);
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  padding: 50px 40px;
+  border: 2px solid var(--romantic-border);
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    inset 0 0 100px rgba(255, 107, 107, 0.1);
+  overflow: hidden;
+}
+
+/* Marco galáctico */
+.galactic-frame {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 40px;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.frame-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    transparent, 
+    rgba(255, 107, 107, 0.1), 
+    rgba(157, 78, 221, 0.1),
+    transparent);
+  animation: rotateBackground 25s infinite linear;
+}
+
+.frame-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.frame-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+}
+
+.orbiting-heart {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: orbitHeart 10s infinite linear;
+}
+
+.orbiting-heart:nth-child(1) { animation-duration: 12s; }
+.orbiting-heart:nth-child(2) { animation-duration: 15s; animation-direction: reverse; }
+.orbiting-heart:nth-child(3) { animation-duration: 18s; }
+
+.orbiting-heart i {
+  font-size: 1.5rem;
+  color: var(--romantic-secondary);
+  opacity: 0.7;
+}
+
+/* Contenido del mensaje */
+.message-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* Encabezado del mensaje */
+.message-header {
+  margin-bottom: 40px;
+}
+
+.title-constellation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.title-star {
+  width: 10px;
+  height: 10px;
+  background: var(--romantic-accent);
+  border-radius: 50%;
+  animation: twinkle 2s infinite;
+}
+
+.title-star:nth-child(2), .title-star:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.title-star:nth-child(3), .title-star:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.galactic-title {
+  font-size: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 20px;
+}
+
+.title-for {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: var(--romantic-text-secondary);
+  opacity: 0.9;
+}
+
+.title-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4.5rem;
+  color: var(--romantic-primary);
+  text-shadow: 0 0 20px var(--romantic-glow);
+  background: linear-gradient(45deg, var(--romantic-primary), var(--romantic-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+}
+
+.title-from {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: var(--romantic-space);
+  opacity: 0.8;
+}
+
+/* Separador cósmico */
+.cosmic-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  position: relative;
+}
+
+.separator-dot {
+  width: 12px;
+  height: 12px;
+  background: var(--romantic-space);
+  border-radius: 50%;
+  animation: twinkle 3s infinite;
+}
+
+.separator-line {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--romantic-space), 
+    transparent);
+}
+
+.separator-heart {
+  margin: 0 30px;
+  font-size: 2.5rem;
+  color: var(--romantic-primary);
+  animation: heartbeat 2s infinite;
+}
+
+/* Mensaje principal */
+.main-message {
+  margin: 50px 0;
+}
+
+.message-text {
+  font-size: 2.2rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.message-text.clicked {
+  transform: scale(1.02);
+}
+
+.message-line {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  color: var(--romantic-text);
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.word:hover {
+  color: var(--romantic-secondary);
+  transform: translateY(-5px);
+  text-shadow: 0 0 15px var(--romantic-glow);
+}
+
+.w4, .w11 {
+  color: var(--romantic-primary);
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+/* Firma del mensaje */
+.message-signature {
+  display: flex;
+  align-items: center;
+  margin: 50px 0 30px;
+}
+
+.signature-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--romantic-primary), 
+    transparent);
+}
+
+.signature-content {
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--romantic-text-secondary);
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+}
+
+.signature-content i {
+  color: var(--romantic-primary);
+  font-size: 1.5rem;
+  animation: twinkle 2s infinite;
+}
+
+/* Sistema del corazón interactivo */
+.interactive-heart-system {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 40px auto;
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* Anillos del corazón */
+.heart-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 3px solid var(--romantic-primary);
+  border-radius: 50%;
+  opacity: 0;
+  animation: energyRing 1s infinite ease-out;
+}
+
+.ring-1 { animation-delay: 0s; }
+.ring-2 { animation-delay: 0.3s; }
+.ring-3 { animation-delay: 0.6s; }
+
+/* Corazón principal */
+.main-heart {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 5;
+  pointer-events: all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.main-heart:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.main-heart.hover {
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+.main-heart.activating {
+  animation: heartbeatStrong 0.5s infinite;
+}
+
+.heart-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, 
+    var(--romantic-glow) 0%, 
+    transparent 70%);
+  border-radius: 50%;
+  animation: pulseGlow 2s infinite;
+  filter: blur(10px);
+}
+
+.heart-pulse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--romantic-primary);
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: corePulse 1.5s infinite;
+}
+
+.heart-core {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, 
+    var(--romantic-primary), 
+    var(--romantic-secondary));
+  border-radius: 50%;
+  box-shadow: 
+    0 0 30px var(--romantic-glow),
+    inset 0 0 20px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s;
+}
+
+.heart-core i {
+  font-size: 3.5rem;
+  color: white;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  animation: heartbeat 2s infinite;
+}
+
+.heart-sparkles {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  display: flex;
+  gap: 5px;
+  z-index: 3;
+}
+
+.heart-sparkles i {
+  color: var(--romantic-accent);
+  font-size: 1.2rem;
+  animation: sparkleTwinkle 1.5s infinite;
+  animation-delay: calc(var(--i) * 0.5s);
+}
+
+.heart-sparkles i:nth-child(1) { --i: 0; }
+.heart-sparkles i:nth-child(2) { --i: 1; }
+.heart-sparkles i:nth-child(3) { --i: 2; }
+
+/* Partículas de amor */
+.love-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.amor-particle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* Instrucción flotante */
+.floating-instruction {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--romantic-text-secondary);
+  font-size: 1.1rem;
+  opacity: 0;
+}
+
+.floating-instruction i {
+  font-size: 2rem;
+  color: var(--romantic-accent);
+  animation: floatLove 3s infinite ease-in-out;
+}
+
+.instruction-text {
+  font-weight: 500;
+  background: rgba(20, 10, 40, 0.8);
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 1px solid var(--romantic-border);
+}
+
+.instruction-arrow {
+  animation: bounce 2s infinite;
+}
+
+.instruction-arrow i {
+  font-size: 1.5rem;
+  color: var(--romantic-primary);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* Efectos flotantes */
+.floating-effects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.floating-effect {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0;
+  animation: floatLove 6s infinite ease-in-out;
+}
+
+.effect-1 { top: 10%; left: 5%; animation-delay: 0s; }
+.effect-2 { top: 20%; right: 10%; animation-delay: 1.5s; }
+.effect-3 { bottom: 30%; left: 15%; animation-delay: 3s; }
+.effect-4 { bottom: 10%; right: 5%; animation-delay: 4.5s; }
+
+/* Temporizador de anticipación */
+.anticipation-timer {
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timer-label {
+  color: var(--romantic-text-secondary);
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.timer-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.timer-digit {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--romantic-primary);
+  font-family: 'Poppins', monospace;
+  text-shadow: 0 0 20px var(--romantic-glow);
+  min-width: 60px;
+}
+
+.timer-text {
+  color: var(--romantic-text);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Brillo del mensaje */
+.message-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, 
+    transparent 0%, 
+    rgba(255, 107, 107, 0.05) 50%,
+    transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Sistema de partículas */
+.particle-system {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.love-particle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* Panel de información romántica */
+.romantic-info {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--romantic-text-secondary);
+  font-size: 1rem;
+  background: rgba(20, 10, 40, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+}
+
+.info-item:hover {
+  background: rgba(255, 107, 107, 0.1);
+  border-color: var(--romantic-border);
+  transform: translateY(-5px);
+}
+
+.info-item i {
+  color: var(--romantic-primary);
+  font-size: 1.2rem;
+}
+
+/* Contador secreto */
+.secret-counter {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(157, 78, 221, 0.1);
+  color: var(--romantic-text);
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 1000;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(157, 78, 221, 0.3);
+  box-shadow: 0 5px 20px rgba(157, 78, 221, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s;
+}
+
+.secret-counter i {
+  color: var(--romantic-magic);
+  font-size: 1.3rem;
+}
+
+.secret-counter strong {
+  color: var(--romantic-accent);
+  font-size: 1.3rem;
+}
+
+/* Modal de secreto */
+.secret-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-space {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: var(--romantic-text);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  background: var(--romantic-primary);
+  transform: rotate(90deg);
+}
+
+.modal-content {
+  background: linear-gradient(135deg, 
+    rgba(40, 20, 60, 0.95), 
+    rgba(20, 10, 40, 0.95));
+  border-radius: 25px;
+  padding: 40px;
+  border: 2px solid var(--romantic-magic);
+  box-shadow: 0 0 50px rgba(157, 78, 221, 0.4);
+}
+
+.secret-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.secret-header i {
+  font-size: 2rem;
+  color: var(--romantic-magic);
+  animation: sparkleTwinkle 2s infinite;
+}
+
+.secret-header h3 {
+  color: var(--romantic-text);
+  font-size: 2rem;
+  margin: 0;
+}
+
+.secret-body {
+  margin-bottom: 30px;
+}
+
+.secret-text {
+  color: var(--romantic-text-secondary);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+.secret-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.secret-stat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--romantic-text);
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.secret-stat i {
+  color: var(--romantic-primary);
+  font-size: 1.3rem;
+}
+
+.secret-stat strong {
+  color: var(--romantic-secondary);
+  font-size: 1.3rem;
+}
+
+.btn-secret-action {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, 
+    var(--romantic-primary), 
+    var(--romantic-magic));
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  transition: all 0.3s;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.btn-secret-action:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(157, 78, 221, 0.4);
+}
+
+/* Onda de amor */
+.love-wave {
+  position: fixed;
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* Notificación flotante romántica */
+.floating-notification-romantic {
+  position: fixed;
+  border-radius: 50px;
+  font-weight: bold;
+  z-index: 10000;
+  backdrop-filter: blur(10px);
+  animation: notificationRomantic 3s ease-out forwards;
+  text-align: center;
+}
+
+/* Animaciones generales */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; transform: scale(0.95); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes rotateBackground {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes energyRing {
+  0% { transform: scale(0.8); opacity: 0.5; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes corePulse {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.2); opacity: 0.2; }
+}
+
+@keyframes heartbeatStrong {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+@keyframes orbitHeart {
+  0% { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
+
+@keyframes revealWord {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sparkleTwinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes floatLove {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
+  50% { transform: translateY(-30px) rotate(10deg); opacity: 1; }
+}
+
+@keyframes notificationRomantic {
+  0% { transform: translateX(-50%) translateY(50px); opacity: 0; }
+  20% { transform: translateX(-50%) translateY(0); opacity: 1; }
+  80% { transform: translateX(-50%) translateY(0); opacity: 1; }
+  100% { transform: translateX(-50%) translateY(-50px); opacity: 0; }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .message-container {
+    width: 700px;
+    padding: 40px 30px;
+  }
+  
+  .galactic-title {
+    font-size: 3rem;
+  }
+  
+  .title-name {
+    font-size: 4rem;
+  }
+  
+  .message-text {
+    font-size: 2rem;
+  }
+  
+  .romantic-info {
+    gap: 20px;
+  }
+  
+  .info-item {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .message-container {
+    width: 90%;
+    padding: 30px 20px;
+  }
+  
+  .galactic-title {
+    font-size: 2.5rem;
+  }
+  
+  .title-name {
+    font-size: 3.5rem;
+  }
+  
+  .title-for, .title-from {
+    font-size: 1.8rem;
+  }
+  
+  .message-text {
+    font-size: 1.8rem;
+  }
+  
+  .message-line {
+    gap: 10px;
+  }
+  
+  .word {
+    font-size: 1.6rem;
+  }
+  
+  .w4, .w11 {
+    font-size: 2rem;
+  }
+  
+  .interactive-heart-system {
+    width: 130px;
+    height: 130px;
+  }
+  
+  .heart-core {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .heart-core i {
+    font-size: 3rem;
+  }
+  
+  .love-counter,
+  .connection-timer,
+  .secret-counter {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+  
+  .control-panel-index {
+    top: 10px;
+    right: 10px;
+    padding: 12px;
+  }
+  
+  .romantic-nebula,
+  .love-galaxy {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .message-container {
+    padding: 25px 15px;
+  }
+  
+  .galactic-title {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .title-name {
+    font-size: 2.8rem;
+  }
+  
+  .title-for, .title-from {
+    font-size: 1.5rem;
+  }
+  
+  .message-text {
+    font-size: 1.5rem;
+  }
+  
+  .message-line {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .word {
+    font-size: 1.4rem;
+  }
+  
+  .w4, .w11 {
+    font-size: 1.8rem;
+  }
+  
+  .separator-line {
+    width: 40px;
+  }
+  
+  .interactive-heart-system {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .heart-core {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .heart-core i {
+    font-size: 2.5rem;
+  }
+  
+  .timer-digit {
+    font-size: 2.5rem;
+  }
+  
+  .timer-text {
+    font-size: 1rem;
+  }
+  
+  .romantic-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .control-panel-index {
+    flex-direction: row;
+    top: auto;
+    bottom: 10px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  
+  .control-item {
+    padding: 10px;
+  }
+  
+  .control-label {
+    font-size: 0.75rem;
+  }
+  
+  .luciana-constellation {
+    display: none;
+  }
+}
